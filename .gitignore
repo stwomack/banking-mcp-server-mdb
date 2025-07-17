@@ -1,3 +1,5 @@
 .env
 .idea
+__pycache__/
 mcp_client/__pycache__
+mcp_server/__pycache__

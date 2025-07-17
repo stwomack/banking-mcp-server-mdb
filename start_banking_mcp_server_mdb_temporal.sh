@@ -2,7 +2,7 @@
 set -e
 
 # Absolute path to your project root
-PROJECT_DIR="/Users/swomack/workspace/banking-mcp-server-mdb"
+PROJECT_DIR="/Users/swomack/workspace/banking-mcp-server-mdb-temporal"
 
 cd "$PROJECT_DIR"
 
