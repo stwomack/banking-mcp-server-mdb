@@ -6,7 +6,6 @@ from contextlib import AsyncExitStack
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 
-
 class MCPClient:
     """MCP client for connecting to the money transfer server."""
 

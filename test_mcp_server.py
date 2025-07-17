@@ -3,8 +3,7 @@
 
 import asyncio
 import json
-from temporal_agent.mcp_client import MCPToolsClient
-
+from mcp_client.mcp_client import MCPToolsClient
 
 async def test_mcp_server():
     """Test the MCP server functionality."""
