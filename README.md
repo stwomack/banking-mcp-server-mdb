@@ -29,8 +29,7 @@ A simple Model Context Protocol (MCP) server for basic banking operations (CRUD)
    MONGO_DB=money_transfer_db
    ```
    Start your MongoDB server if not already running.
-4. **Start the MCP server**
-   **Note: This doesn't do anything by itself. It's meant to be called via MCP Clients or toold like ClaudeDesktop**
+4. **Start the MCP server** (Note: This doesn't do anything by itself. It's meant to be called via MCP Clients or toold like ClaudeDesktop)
    ```bash
    ./start_banking_mcp_server_mdb.sh
    ```
