@@ -8,7 +8,7 @@ load_dotenv()
 class Database:
     def __init__(self):
         self.mongo_uri = os.getenv("MONGO_URI", "mongodb://localhost:27017")
-        self.mongo_db = os.getenv("MONGO_DB", "money_transfer_db")
+        self.mongo_db = os.getenv("MONGO_DB", "bankingdemo")
         self.client = MongoClient(self.mongo_uri)
         self.db = self.client[self.mongo_db]
         self.accounts = self.db.accounts
