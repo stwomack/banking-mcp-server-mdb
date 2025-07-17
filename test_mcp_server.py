@@ -15,7 +15,7 @@ async def test_mcp_server():
         print("\n1. Testing health check...")
         health = await client.health_check()
         print(f"Health check result: {health}")
-        
+
         # Test account creation
         print("\n2. Testing account creation...")
         result = await client.create_account("alice", 1000.0)
@@ -76,7 +76,7 @@ async def test_mcp_server():
         print("\n10. Cleaning up...")
         result = await client.delete_account("alice")
         print(f"Delete alice: {result}")
-        
+
         result = await client.delete_account("bob")
         print(f"Delete bob: {result}")
         
