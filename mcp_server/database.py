@@ -11,8 +11,8 @@ class Database:
         self.mongo_db = os.getenv("MONGO_DB", "bankingdemo")
         self.client = MongoClient(
             self.mongo_uri,
-            serverSelectionTimeoutMS=10000,  # 10 seconds
-            connectTimeoutMS=10000,          # 10 seconds
+            serverSelectionTimeoutMS=5000,  # 5 seconds
+            connectTimeoutMS=5000,          # 5 seconds
         )
         self.db = self.client[self.mongo_db]
         self.accounts = self.db.accounts

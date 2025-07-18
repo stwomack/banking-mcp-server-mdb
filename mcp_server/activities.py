@@ -28,10 +28,7 @@ async def create_account_activity(username: str, balance: float = 0.0) -> Dict[s
         }
     except Exception as e:
         activity.logger.error(f"Error creating account: {str(e)}")
-        return {
-            "success": False,
-            "error": f"Database error: {str(e)}"
-        }
+        raise
 
 
 @activity.defn
@@ -52,10 +49,7 @@ async def delete_account_activity(username: str) -> Dict[str, Any]:
             }
     except Exception as e:
         activity.logger.error(f"Error deleting account: {str(e)}")
-        return {
-            "success": False,
-            "error": f"Database error: {str(e)}"
-        }
+        raise
 
 
 @activity.defn
@@ -76,10 +70,7 @@ async def get_account_activity(username: str) -> Dict[str, Any]:
             }
     except Exception as e:
         activity.logger.error(f"Error getting account: {str(e)}")
-        return {
-            "success": False,
-            "error": f"Database error: {str(e)}"
-        }
+        raise
 
 
 @activity.defn
@@ -90,10 +81,7 @@ async def list_accounts_activity() -> List[Dict[str, Any]]:
         return [{"username": acc["username"], "balance": acc["balance"]} for acc in accounts]
     except Exception as e:
         activity.logger.error(f"Error listing accounts: {str(e)}")
-        return {
-            "success": False,
-            "error": f"Database error: {str(e)}"
-        }
+        raise
 
 
 @activity.defn
@@ -128,10 +116,7 @@ async def deposit_activity(username: str, amount: float) -> Dict[str, Any]:
             }
     except Exception as e:
         activity.logger.error(f"Error depositing funds: {str(e)}")
-        return {
-            "success": False,
-            "error": f"Database error: {str(e)}"
-        }
+        raise
 
 
 @activity.defn
@@ -172,10 +157,7 @@ async def withdraw_activity(username: str, amount: float) -> Dict[str, Any]:
             }
     except Exception as e:
         activity.logger.error(f"Error withdrawing funds: {str(e)}")
-        return {
-            "success": False,
-            "error": f"Database error: {str(e)}"
-        }
+        raise
 
 
 @activity.defn
@@ -211,10 +193,7 @@ async def transfer_activity(from_user: str, to_user: str, amount: float) -> Dict
             }
     except Exception as e:
         activity.logger.error(f"Error transferring funds: {str(e)}")
-        return {
-            "success": False,
-            "error": f"Database error: {str(e)}"
-        }
+        raise
 
 
 @activity.defn
@@ -226,8 +205,4 @@ async def health_check_activity() -> Dict[str, Any]:
         }
     except Exception as e:
         activity.logger.error(f"Error in health check: {str(e)}")
-        return {
-            "status": "unhealthy",
-            "service": "MCP Money Transfer Server (Temporal)",
-            "error": str(e)
-        }
+        raise
