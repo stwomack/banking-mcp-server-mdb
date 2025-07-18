@@ -90,7 +90,10 @@ async def list_accounts_activity() -> List[Dict[str, Any]]:
         return [{"username": acc["username"], "balance": acc["balance"]} for acc in accounts]
     except Exception as e:
         activity.logger.error(f"Error listing accounts: {str(e)}")
-        return []
+        return {
+            "success": False,
+            "error": f"Database error: {str(e)}"
+        }
 
 
 @activity.defn

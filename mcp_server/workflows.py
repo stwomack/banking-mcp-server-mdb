@@ -12,7 +12,6 @@ logger = logging.getLogger(__name__)
 retry_policy = RetryPolicy(
     initial_interval=timedelta(seconds=1),
     maximum_interval=timedelta(seconds=60),
-    maximum_attempts=3,
 )
 
 @dataclass
