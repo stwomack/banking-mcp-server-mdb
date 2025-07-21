@@ -3,4 +3,4 @@
 __pycache__/
 mcp_client/__pycache__
 mcp_server/__pycache__
-
+.cursor
