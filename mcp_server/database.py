@@ -8,7 +8,7 @@ load_dotenv()
 class Database:
     def __init__(self):
         self.mongo_uri = os.getenv("MONGO_URI", "mongodb://localhost:27017")
-        self.mongo_db = os.getenv("MONGO_DB", "bankingdemo")
+        self.mongo_db = os.getenv("MONGO_DB", "banking-mcp-demo")
         self.client = MongoClient(
             self.mongo_uri,
             serverSelectionTimeoutMS=5000,  # 5 seconds
