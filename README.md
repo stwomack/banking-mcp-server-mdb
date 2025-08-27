@@ -1,6 +1,6 @@
 # Banking MCP Server (MongoDB Backend)
 
-A simple Model Context Protocol (MCP) server for basic banking operations (CRUD) using MongoDB as the backend. This project demonstrates how to build an MCP server for account management and money transfers.
+A simple Model Context Protocol (MCP) server for basic banking operations (CRUD) using MongoDB as the backend. This project demonstrates how to build an MCP server for account management and money transfers. This readme really needs some lovin. Not everything is documented.
 
 ## Features
 - Create, delete, and list accounts
@@ -32,6 +32,10 @@ A simple Model Context Protocol (MCP) server for basic banking operations (CRUD)
 4. **Start the MCP server** (Note: This doesn't do anything by itself. It's meant to be called via MCP Clients or toold like ClaudeDesktop)
    ```bash
    ./start_banking_mcp_server_mdb.sh
+   ```
+5. **If running the temporal version for durable MCP, start the temporal worker**
+   ```
+   python -m mcp_server.worker
    ```
 
 ## Claude Desktop Configuration
