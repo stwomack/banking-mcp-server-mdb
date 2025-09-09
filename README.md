@@ -39,7 +39,7 @@ A simple Model Context Protocol (MCP) server for basic banking operations (CRUD)
    ```
 
 ## Claude Desktop Configuration
-Add this to your `claude_desktop_config.json` to use the server:
+Add this to your `/Users/swomack/Library/Application Support/Claude/claude_desktop_config.json` file to use the server:
 ```json
 "mcpServers": {
   "bank_accounts": {
